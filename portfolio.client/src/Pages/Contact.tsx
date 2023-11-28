@@ -1,13 +1,22 @@
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+
+import { ClipLoader } from 'react-spinners';
 function Contact() {
   const inputClass =
-    'pl-2 py-2 rounded-md bg-background-dark/10 text-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent';
+    'pl-2 py-2 rounded-md bg-background-dark/10 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent';
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
+  const onSubmit = async () => {
+    // Simulate an asynchronous action, like an API call
+    await new Promise((resolve) =>
+      setTimeout(resolve, 1000)
+    );
+    toast.success('Message sent successfully!');
+  };
   return (
     <div className='flex flex-col pt-10'>
       <h1 className='text-3xl font-bold text-center text-text-dark'>
@@ -18,9 +27,7 @@ function Contact() {
         surveying team.
       </h2>
       <form
-        onSubmit={handleSubmit(() => {
-          toast.success('Message sent successfully!');
-        })}
+        onSubmit={handleSubmit(onSubmit)}
         className='flex flex-col justify-center w-full max-w-md mx-auto p-5 md:p-0'
       >
         <h2 className='text-text-dark py-1'> Full Name*</h2>
@@ -64,9 +71,9 @@ function Contact() {
         <h2 className='text-text-dark pt-2 pb-1'>
           Message*
         </h2>
-        <input
+        <textarea
           {...register('message', { required: true })}
-          className={inputClass}
+          className={`${inputClass} h-32`}
           placeholder='Enter your message'
         />
         {!errors.message && <p className='py-3'> </p>}
@@ -77,13 +84,28 @@ function Contact() {
         )}
         <div className='flex justify-center mt-5 w-[100%] gap-5 px-10 h-[48px]'>
           <input
-            className='w-full rounded-lg border-1 border border-white text-text-dark'
+            className='w-full rounded-lg border-1 border border-black text-text-dark'
             type='Reset'
           />
-          <input
-            className='w-full rounded-lg border-1 border border-black bg-background-dark text-text-dark'
+          <button
+            className={`w-full rounded-lg border-1 border border-accent-dark bg-accent-dark text-white relative ${
+              isSubmitting
+                ? 'opacity-50 cursor-not-allowed'
+                : ''
+            }`}
             type='submit'
-          />
+            disabled={isSubmitting}
+          >
+            {isSubmitting && (
+              <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                <ClipLoader
+                  color={'#fff'}
+                  loading={isSubmitting}
+                />
+              </div>
+            )}
+            {!isSubmitting ? 'Submit' : null}
+          </button>
         </div>
       </form>
     </div>

@@ -10,7 +10,7 @@ const Navbar = () => {
   }
   const [open, setOpen] = React.useState(false);
   return (
-    <nav className='flex justify-between items-center bg-[#3C0056] p-5 md:top-0 md:fixed md:z-10 md:right-0 md:w-full'>
+    <nav className='flex justify-between items-center bg-[#3C0056] p-5'>
       {/*<img src={logo} alt="Logo" />*/}
       {/*<h1 className="text-text-dark text-3xl pl-5"> Arbiter Adjusters</h1>*/}
 
@@ -31,10 +31,10 @@ const Navbar = () => {
             <Link to='/about'>Services</Link>
           </li>
           <li className='hover:shadow hover:ring-2 rounded-xl p-3'>
-            <Link to='/about'>About</Link>
+            <Link to='/about'>About Us</Link>
           </li>
           <li className='hover:shadow hover:ring-2 rounded-xl p-3'>
-            <Link to='/contact'>Contact</Link>
+            <Link to='/contact'>Contact Us</Link>
           </li>
         </ul>
       )}
@@ -46,10 +46,10 @@ const Navbar = () => {
           <Link to='/about'>Services</Link>
         </li>
         <li className='hover:shadow hover:ring-2 rounded-xl p-3'>
-          <Link to='/about'>About</Link>
+          <Link to='/about'>About Us</Link>
         </li>
         <li className='hover:shadow hover:ring-2 rounded-xl p-3'>
-          <Link to='/contact'>Contact</Link>
+          <Link to='/contact'>Contact Us</Link>
         </li>
       </ul>
     </nav>

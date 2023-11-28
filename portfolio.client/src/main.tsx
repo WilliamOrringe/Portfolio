@@ -15,14 +15,13 @@ ReactDOM.createRoot(
       <ToastContainer
         position='bottom-center'
         autoClose={3000}
-        hideProgressBar={false}
+        hideProgressBar={true}
         newestOnTop={true}
         closeOnClick
         rtl={false}
-        pauseOnFocusLoss
         draggable
-        pauseOnHover
-        theme='dark'
+        pauseOnHover={false}
+        theme='light'
       />
     </BrowserRouter>
   </React.StrictMode>

@@ -8,16 +8,16 @@ export default {
         extend: {
             colors: {
                 text: {
-                    dark: "#FFFFFF",
-                    light: "#000000",
+                    light: "#FFFFFF",
+                    dark: "#000000",
                 },
                 background: {
-                    dark: "#110B13",
-                    light: "#F2ECF4",
+                    light: "#110B13",
+                    dark: "#F2ECF4",
                 },
                 primary: {
-                    dark: "#64008F",
-                    light: "#D470FF",
+                    light: "#64008F",
+                    dark: "#D470FF",
                 },
                 secondary: {
                     dark: "#1F1424",
