@@ -15,7 +15,10 @@
 }
 :root {
     background: rgba("#110B13", 0.9);
+    height: max-content;
 }
 body{
     font-family:  "Raleway";
+    
+    background: rgba("#110B13", 0.9);
 }
