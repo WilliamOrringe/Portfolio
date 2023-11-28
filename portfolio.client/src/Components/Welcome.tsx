@@ -17,8 +17,8 @@ const Welcome = () => {
     toast.success('Subscribed Succesfully!');
   };
   return (
-    <div className=' mb-[120px] px-[250px] pt-10 flex gap-[60px]'>
-      <div className='flex flex-col'>
+    <div className='flex mb-[120px] justify-center pt-10 gap-[60px] ml-2 md:ml-0'>
+      <div className='flex flex-col mx-5'>
         <h1 className='text-[40px] font-bold'>
           Welcome to Arbiter Adjusters!
         </h1>
@@ -41,7 +41,8 @@ const Welcome = () => {
             </p>
           )}
           <button
-            className={`w-[160px] p-[12px] mt-[14px] h-[48px] ml-2 rounded-lg border-1 border border-accent-dark bg-accent-dark text-white relative ${
+            className={`w-[160px] p-[12px] mt-[14px] h-[48px] ml-2 rounded-lg border-1 
+            border border-accent-dark bg-accent-dark text-black relative ${
               isSubmitting
                 ? 'opacity-50 cursor-not-allowed'
                 : ''
@@ -61,7 +62,10 @@ const Welcome = () => {
           </button>
         </form>
       </div>
-      <img src={surveyor}></img>
+      <img
+        src={surveyor}
+        className='w-min hidden lg:flex lg:mr-5 xl:mr-0'
+      ></img>
     </div>
   );
 };

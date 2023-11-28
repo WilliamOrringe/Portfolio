@@ -1,4 +1,6 @@
+import PracticeAreas from '../Components/PracticeAreas';
 import Services from '../Components/Services';
+import Vision from '../Components/Vision';
 import Welcome from '../Components/Welcome';
 import city from '../assets/Group 2112city.svg';
 import Contact from './Contact';
@@ -19,6 +21,8 @@ function Home() {
       <br />
       <Welcome />
       <Services />
+      <PracticeAreas />
+      <Vision />
       {/* 
       <p className='text-text-dark px-5'>
         We provide claims management and surveying solutions

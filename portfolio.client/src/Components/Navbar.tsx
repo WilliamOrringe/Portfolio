@@ -28,7 +28,7 @@ const Navbar = () => {
             <Link to='/'>Home</Link>
           </li>
           <li className='hover:shadow hover:ring-2 rounded-xl p-3'>
-            <Link to='/about'>Services</Link>
+            <Link to='/services'>Services</Link>
           </li>
           <li className='hover:shadow hover:ring-2 rounded-xl p-3'>
             <Link to='/about'>About Us</Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
           <Link to='/'>Home</Link>
         </li>
         <li className='hover:shadow hover:ring-2 rounded-xl p-3'>
-          <Link to='/about'>Services</Link>
+          <Link to='/services'>Services</Link>
         </li>
         <li className='hover:shadow hover:ring-2 rounded-xl p-3'>
           <Link to='/about'>About Us</Link>
